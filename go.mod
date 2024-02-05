@@ -1,4 +1,4 @@
-module github.com/LewisJAllan/greeter
+module github.com/LewisJAllan/schemas
 
 go 1.21
 
