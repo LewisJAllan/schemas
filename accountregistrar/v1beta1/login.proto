@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "https://github.com/LewisJAllan/schemas/blob/master/accountregistrar/v1beta1";
+package accountregistrar;
+
+// The greeting service definition.
+service AccountRegistrarService {
+  // Login Sends a request to access a user account and actions
+  rpc Login (LoginRequest) returns (LoginResponse) {}
+}
+
+// The request message containing the user's name.
+message LoginRequest {
+  // username should be unique per user
+  string username = 1;
+  // password is an encrypted value created by the user
+  string password = 2;
+  // attempt is the current attempt at logging in
+  int32 attempt = 3;
+}
+
+// The response message containing the greetings
+message LoginResponse {
+  // success is either true for a successful login or incorrect, not further information given to prevent hacking knowledge
+  bool success = 1;
+}
