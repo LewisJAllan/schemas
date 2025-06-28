@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+option go_package = "https://github.com/LewisJAllan/schemas/blob/master/accountregistrar/v1beta1";
+
+package accountregistrar;
